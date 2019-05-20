@@ -3,12 +3,11 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <RootNamespace>grpc_method_not_found_repro</RootNamespace>
+    <OutputType>Exe</OutputType>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Google.Protobuf" Version="3.7.0" />
-    <!-- <PackageReference Include="Grpc.Core" Version="1.20.1" /> -->
-    <PackageReference Include="Grpc.Core" Version="1.18.0" />
-    <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="1.0.24" />
+    <PackageReference Include="Grpc.Core" Version="1.20.1" />
   </ItemGroup>
   <ItemGroup>
     <None Update="host.json">

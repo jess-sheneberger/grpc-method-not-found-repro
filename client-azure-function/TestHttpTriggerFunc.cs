@@ -14,15 +14,6 @@ using Service;
 
 namespace grpc_method_not_found_repro
 {
-    class ImportImpl : Service.Import.ImportBase {
-        public override global::System.Threading.Tasks.Task Import(Grpc.Core.IAsyncStreamReader<ImportRequest> requestStream, Grpc.Core.IServerStreamWriter<ImportResponse> responseStream, Grpc.Core.ServerCallContext context) {
-            var res = new ImportResponse();
-            res.Result = "result123xyz";
-            Console.WriteLine("Server got request, sending response");
-            return responseStream.WriteAsync(res);
-        }
-    }
-    
     public static class TestHttpTriggerFunc
     {
         [FunctionName("TestHttpTriggerFunc")]
@@ -43,7 +34,8 @@ namespace grpc_method_not_found_repro
 
             var client = new Service.Import.ImportClient(channel);
 
-            var opt = new CallOptions().WithHeaders(Metadata.Empty);
+            var opt = new CallOptions(Metadata.Empty);//.WithHeaders(Metadata.Empty);
+
 
             var stream = client.Import(opt);
             var r = new ImportRequest();
