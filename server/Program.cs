@@ -30,7 +30,7 @@ namespace Program
             Console.WriteLine("Server started - slam enter to exit");
 
 
-            Console.ReadKey();
+            Console.ReadLine();
             server.ShutdownAsync().Wait();
         }
     }
