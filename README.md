@@ -2,7 +2,7 @@ To reproduce the behavior, you'll need the `func` commandline tools for Microsof
 
 https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local#v2
 
-I created this repro on a Mac. (TODO: test on Windows)
+I created this repro on a Mac.
 
 1. Clone this repo
 2. In one terminal, start the server in grpc-method-not-found-repro/server: `dotnet run`
