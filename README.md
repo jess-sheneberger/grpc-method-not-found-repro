@@ -24,5 +24,5 @@ Expected behavior: Same as before. Instead, the client dies before it can make t
 
 `
 [5/20/19 10:22:26 PM] Executed 'TestHttpTriggerFunc' (Failed, Id=de8a73f2-46e2-4ad6-b890-bb955a78a7f0)
-[5/20/19 10:22:26 PM] System.Private.CoreLib: Exception while executing function: TestHttpTriggerFunc. client-azure-function: Method not found: 'Void Grpc.Core.CallOptions..ctor(Grpc.Core.Metadata, System.Nullable`1<System.DateTime>, System.Threading.CancellationToken, Grpc.Core.WriteOptions, Grpc.Core.ContextPropagationToken, Grpc.Core.CallCredentials)'.
+[5/20/19 10:22:26 PM] System.Private.CoreLib: Exception while executing function: TestHttpTriggerFunc. client-azure-function: Method not found: 'Void Grpc.Core.CallOptions..ctor(Grpc.Core.Metadata, System.Nullable``1<System.DateTime>, System.Threading.CancellationToken, Grpc.Core.WriteOptions, Grpc.Core.ContextPropagationToken, Grpc.Core.CallCredentials)'.
 `
