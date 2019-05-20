@@ -1,0 +1,28 @@
+syntax = 'proto3';
+
+package service;
+
+message Row {
+    string jobURL = 1;
+    string contentType = 2;
+    bytes data = 3;
+}
+
+message ImportRequest {
+    Row source = 1; 
+}
+
+message ImportResponse {
+    Error error = 1;
+    Row source = 2;
+    string result = 3;
+}
+
+message Error {
+    string message = 1;
+    int64 code = 2;
+}
+
+service Import {
+    rpc Import(stream ImportRequest) returns (stream ImportResponse);
+}
